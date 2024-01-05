@@ -1,5 +1,6 @@
-from log import Log
-from service import three, four, six
+from log import Log, LogStatus
+from service import three, four, six, nine
+from collections import defaultdict
 
 
 def read_logs():
@@ -17,6 +18,19 @@ def read_logs():
 
 def main():
     log_dict = read_logs()
+    mlist = [LogStatus.INFO, LogStatus.ERROR, LogStatus.DEBUG]
+    sep_log_dict = {'app_name':None}
+    failure_rate = {'app_type': None, 'value': None}
+    for x in mlist:
+        for key in log_dict.items():
+            if x not in sep_log_dict:
+                sep_log_dict[x] = {}
+            sep_log_dict[x][tuple(key)] = x
+            failure_rate['app_type'] = x
+            total = len(sep_log_dict[x])
+            aux = nine(sep_log_dict[x])
+            failure_rate['value'] = (aux/total) * 100
+    print(failure_rate.items())
     print(three(log_dict))
     print(four(log_dict))
     print(six(log_dict))
