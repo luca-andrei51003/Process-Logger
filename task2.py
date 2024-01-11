@@ -3,6 +3,7 @@ from collections import defaultdict
 total_run_time = {'BackendApp': 0, 'FrontendApp': 0, 'API': 0}
 successful_run_count = {'BackendApp': 0, 'FrontendApp': 0, 'API': 0}
 
+
 def calculate_average_run_time(total_run_time, successful_run_count):
     average_run_time_per_app = {}
 
@@ -15,10 +16,8 @@ def calculate_average_run_time(total_run_time, successful_run_count):
     return average_run_time_per_app
 
 
-def two():
-    with open("output.txt", 'r') as file:
-        info_logs_count = defaultdict(int)
-
+def two(filename, total_run_time, successful_run_count):
+    with open(filename, 'r') as file:
         for line in file:
             if "[INFO]" in line and "ran successfully" in line and "SYSTEM" not in line:
                 parts = line.split(" - ")
@@ -33,5 +32,6 @@ def two():
     for app, average_run_time in average_run_time_per_app.items():
         print(f'Average successful runtime for {app}: {average_run_time}ms')
 
+    return  average_run_time_per_app
 
-two()
+#two("logTest", total_run_time, successful_run_count)

@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b12929fb-93f9-47a2-b532-bdc78c6a4270" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pythonProjectLogs/log.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pythonProjectLogs/main1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pythonProjectLogs/output.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pythonProjectLogs/service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pythonProjectLogs/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pythonProjectLogs/task1.py" beforeDir="false" afterPath="$PROJECT_DIR$/pythonProjectLogs/task1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestingFile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,16 +40,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task1.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.main.executor": "Run",
+    "Python.main1.executor": "Run",
+    "Python.task1.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\TECHTREK\python\proiect1_python\Process-Logger\pythonProjectLogs" />
