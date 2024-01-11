@@ -1,26 +1,3 @@
-'''
-from collections import defaultdict
-from log import LogStatus
-from itertools import chain
-def failureRatePercentage(log_count, err_log_count, filename = 'output.txt'):
-    with open (filename, 'r') as file:
-        err_log_count = defaultdict(int)
-        for line in file:
-            log_time, log_type, message = line.strip().split(' - ')
-            app = message.split()[0]
-            if log_type == "ERROR":
-                err_log_count[app] += 1
-            else:
-                log_count[(log_type, app)] += 1
-
-def run():
-    log_counts = defaultdict(int)
-    err_log_count = defaultdict(int)
-    failureRatePercentage(log_counts, err_log_count)
-    print("1. Failure rate percentage for each type of App: ")
-    for app, count in log_counts.items():
-        print(f"{app} - Fail percentage: {err_log_count[app]/count * 100}%")
-'''
 from collections import defaultdict
 from log import LogStatus
 from itertools import chain
