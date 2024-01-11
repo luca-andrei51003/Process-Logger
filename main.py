@@ -1,7 +1,8 @@
 from log import Log, LogStatus
-from service import three, four, six, nine
+from service import three, four, six
 from collections import defaultdict
-
+from task9 import failureRatePercentage, run
+from task1 import count_logs_from_file, one
 
 def read_logs():
     with open('input.txt') as f:
@@ -17,28 +18,15 @@ def read_logs():
 
 
 def main():
+    '''
     log_dict = read_logs()
-    
-    for key in log_dict:
-        if (log_dict[key]=="ERROR"):
-            
-    
-    '''mlist = [LogStatus.INFO, LogStatus.ERROR, LogStatus.DEBUG]
-    sep_log_dict = {'app_name':None}
-    failure_rate = {'app_type': None, 'value': None}
-    for x in mlist:
-        for key in log_dict.items():
-            if x not in sep_log_dict:
-                sep_log_dict[x] = {}
-            sep_log_dict[x][tuple(key)] = x
-            failure_rate['app_type'] = x
-            total = len(sep_log_dict[x])
-            aux = nine(sep_log_dict[x])
-            failure_rate['value'] = (aux/total) * 10'''
-    print(failure_rate.items())
+    #print(failure_rate.items())
     print(three(log_dict))
     print(four(log_dict))
     print(six(log_dict))
-
+    print(failureRatePercentage(log_dict))
+    '''
+    run()
+    one()
 
 main()

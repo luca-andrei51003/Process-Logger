@@ -29,6 +29,3 @@ def six(log_dict):
     for log in all_error_logs:
         day_thirds_dict[get_day_third_key(log)].append(log)
     return {k: len(v) for k, v in day_thirds_dict.items()}
-
-def nine (logs):
-    return {k: len(list(filter(lambda l: l.status == LogStatus.ERROR.value, v)))for k, v in logs.items()}

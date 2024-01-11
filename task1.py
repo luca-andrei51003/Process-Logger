@@ -22,7 +22,7 @@ def task1(logs):
         print(f"{app} - {log_type}: {count} logs")
 
 
-#cu citire din fisier
+
 def count_logs_from_file(log_count, filename='output.txt'):
     with open(filename, 'r') as file:
         info_logs_count = defaultdict(int)

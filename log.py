@@ -26,8 +26,5 @@ class Log:
         return cls(match["app"], match["status"], time.fromisoformat(match["ts"]))
 
     def __str__(self):
-<<<<<<< Updated upstream:log.py
+
         return f'TS: {self.timestamp}; APP: {self.app}; STATUS: {self.status}'
-=======
-        return f'TS: {self.timestamp}; APP: {self.app}; STATUS: {self.status}'
->>>>>>> Stashed changes:pythonProjectLogs/log.py
