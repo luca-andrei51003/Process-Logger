@@ -18,7 +18,12 @@ def read_logs():
 
 def main():
     log_dict = read_logs()
-    mlist = [LogStatus.INFO, LogStatus.ERROR, LogStatus.DEBUG]
+    
+    for key in log_dict:
+        if (log_dict[key]=="ERROR"):
+            
+    
+    '''mlist = [LogStatus.INFO, LogStatus.ERROR, LogStatus.DEBUG]
     sep_log_dict = {'app_name':None}
     failure_rate = {'app_type': None, 'value': None}
     for x in mlist:
@@ -29,7 +34,7 @@ def main():
             failure_rate['app_type'] = x
             total = len(sep_log_dict[x])
             aux = nine(sep_log_dict[x])
-            failure_rate['value'] = (aux/total) * 100
+            failure_rate['value'] = (aux/total) * 10'''
     print(failure_rate.items())
     print(three(log_dict))
     print(four(log_dict))
