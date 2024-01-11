@@ -6,8 +6,8 @@ from task1 import one
 from task5 import five
 #from task7 import seven
 
-def read_logs():
-    with open('input.txt') as f:
+def read_logs(file_name):
+    with open(file_name) as f:
         lines = f.readlines()
         lines = [line.strip() for line in lines]
         logs = [Log.from_string(line) for line in lines]
@@ -34,5 +34,5 @@ def main():
 #main()
 #five(log_dict=read_logs())
 #seven(log_dict=read_logs())
-print(run())
-print(five(log_dict=read_logs()))
+#print(run())
+print(five(log_dict=read_logs('input.txt')))
