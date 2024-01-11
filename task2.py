@@ -1,12 +1,7 @@
 from collections import defaultdict
 
-total_run_time = {'BackendApp': 0, 'FrontendApp': 0, 'API': 0}
-successful_run_count = {'BackendApp': 0, 'FrontendApp': 0, 'API': 0}
-
-
 def calculate_average_run_time(total_run_time, successful_run_count):
     average_run_time_per_app = {}
-
     for app, count in successful_run_count.items():
         if count > 0:
             average_run_time_per_app[app] = total_run_time[app] / count
@@ -16,7 +11,9 @@ def calculate_average_run_time(total_run_time, successful_run_count):
     return average_run_time_per_app
 
 
-def two(filename, total_run_time, successful_run_count):
+def two(filename):
+    total_run_time = {'BackendApp': 0, 'FrontendApp': 0, 'API': 0}
+    successful_run_count = {'BackendApp': 0, 'FrontendApp': 0, 'API': 0}
     with open(filename, 'r') as file:
         for line in file:
             if "[INFO]" in line and "ran successfully" in line and "SYSTEM" not in line:

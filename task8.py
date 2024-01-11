@@ -1,12 +1,13 @@
 from datetime import datetime
 
-
-def eight():
-    with open("output.txt", "r") as file:
+def eight(filename):
+    with open(filename, "r") as file:
         logs = file.readlines()
 
     app_types = ["FrontendApp", "BackendApp", "API"]
     activities = ["INFO", "DEBUG", "ERROR"]
+
+    result_dict = {}
 
     for app_type in app_types:
         counts = {activity: {} for activity in activities}
@@ -22,11 +23,14 @@ def eight():
                 else:
                     counts[activity][timestamp.hour] += 1
 
-        print(f"\n{app_type}:")
+        app_results = {}
         for activity in activities:
             hour, count = find_max_hour(counts[activity])
-            print(f"  Most {activity} activities occurred {count} times at hour {hour}")
+            app_results[activity] = {'hour': hour, 'count': count}
 
+        result_dict[app_type] = app_results
+
+    return result_dict
 
 def find_max_hour(counts):
     if not counts:
@@ -35,5 +39,5 @@ def find_max_hour(counts):
     max_hour, max_count = max(counts.items(), key=lambda x: x[1])
     return max_hour, max_count
 
-
-eight()
+#result = eight("output.txt")
+#print(result)

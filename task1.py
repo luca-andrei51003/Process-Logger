@@ -20,7 +20,8 @@ def task1(logs):
         print(f"{app} - {log_type}: {count} logs")
 
 
-def one(log_count, filename):
+def one(filename):
+    log_count = defaultdict(int)
     with open(filename, 'r') as file:
         info_logs_count = defaultdict(int)
 
@@ -39,6 +40,7 @@ def one(log_count, filename):
         for (log_type, app), count in log_count.items():
             print(f"{app} - {log_type}: {count} logs")
 
+        return log_count
 #log_counts = defaultdict(int)
 #one(log_counts, "output.txt")
 
