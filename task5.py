@@ -8,4 +8,4 @@ def five(log_dict):
     for item in app_status_pairs(log_dict):
         if (app_status_pairs(log_dict))[item] == x:
             max_app = item
-    print(max(item_list), max_app)
+    return(max(item_list), max_app)

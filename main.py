@@ -4,7 +4,7 @@ from collections import defaultdict
 from task9 import failureRatePercentage, run
 from task1 import one
 from task5 import five
-from task7 import seven
+#from task7 import seven
 
 def read_logs():
     with open('input.txt') as f:
@@ -33,4 +33,6 @@ def main():
 
 #main()
 #five(log_dict=read_logs())
-seven(log_dict=read_logs())
+#seven(log_dict=read_logs())
+print(run())
+print(five(log_dict=read_logs()))
