@@ -2,8 +2,6 @@ from collections import defaultdict
 from log import LogStatus
 from itertools import chain
 
-
-# cu log.py
 def task1(logs):
     info_logs_count = defaultdict(int)
     log_count = defaultdict(int)

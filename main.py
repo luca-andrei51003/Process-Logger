@@ -3,6 +3,7 @@ from service import three, four, six
 from collections import defaultdict
 from task9 import failureRatePercentage, run
 from task1 import count_logs_from_file, one
+from task5 import five
 
 def read_logs():
     with open('input.txt') as f:
@@ -29,4 +30,5 @@ def main():
     run()
     one()
 
-main()
+#main()
+five(log_dict=read_logs())

@@ -9,8 +9,8 @@ def three(logs):
 def four(logs):
     return next(iter(sorted(three(logs).items(), key=lambda t: t[1], reverse=True)))
 
-def five(logs):
-    return {k: len(list(filter(lambda l: k.status == LogStatus.INFO.value, v))) for k, v in logs.items()}
+def app_status_pairs(logs):
+    return {k: len(list(filter(lambda l: l.status == LogStatus.INFO.value, v))) for k, v in logs.items()}
 
 def get_day_third_key(log):
     if log.timestamp < time.fromisoformat('08:00:00'):
