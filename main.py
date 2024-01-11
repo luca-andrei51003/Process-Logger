@@ -28,11 +28,11 @@ def main():
     print(six(log_dict))
     print(failureRatePercentage(log_dict))
     '''
-    run()
-    one()
+    #run()
+    #one()
 
 #main()
 #five(log_dict=read_logs())
 #seven(log_dict=read_logs())
 #print(run())
-print(five(log_dict=read_logs('input.txt')))
+#print(five(log_dict=read_logs('input.txt')))

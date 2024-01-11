@@ -2,6 +2,7 @@ from collections import defaultdict
 from log import LogStatus
 from itertools import chain
 
+# cu log.py
 def task1(logs):
     info_logs_count = defaultdict(int)
     log_count = defaultdict(int)
@@ -41,12 +42,3 @@ def one(filename):
             print(f"{app} - {log_type}: {count} logs")
 
         return log_count
-#log_counts = defaultdict(int)
-#one(log_counts, "output.txt")
-
-# def one():
-#     log_counts = defaultdict(int)
-#     count_logs_from_file(log_counts)
-#     print("1. INFO/DEBUG/ERROR logs per type of app:")
-#     for (log_type, app), count in log_counts.items():
-#         print(f"{app} - {log_type}: {count} logs")

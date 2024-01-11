@@ -18,7 +18,7 @@ def run():
     err_log_count = defaultdict(int)
     failureRatePercentage(log_counts, err_log_count)
     
-    print("9. Failure rate percentage for each type of App: ")
+    #print("9. Failure rate percentage for each type of App: ")
     '''
     for app in set(chain(log_counts.keys(), err_log_count.keys())):
         final_dict = defaultdict(int)

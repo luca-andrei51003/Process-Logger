@@ -2,7 +2,9 @@ import unittest
 from collections import defaultdict
 from task1 import one
 from task2 import two
+from task5 import five
 from task8 import eight
+from task9 import run
 from service import three, four, six
 from main import read_logs
 
@@ -23,7 +25,6 @@ class TestCountLogsFromFile(unittest.TestCase):
         self.assertEqual(one("logTest"), expected_results)
 
     def test_two(self):
-
         expected_average_run_time = {'API': 17.0, 'BackendApp': 17.0, 'FrontendApp': 23.666666666666668}
         self.assertEqual(two("logTest"), expected_average_run_time)
 
@@ -36,6 +37,11 @@ class TestCountLogsFromFile(unittest.TestCase):
         expected_results = ('FrontendApp', 3)
         log_dict = read_logs("logTest")
         self.assertEqual(four(log_dict), expected_results)
+
+    def test_five(self):
+        expected_results = (6, 'FrontendApp')
+        log_dict = read_logs("logTest")
+        self.assertEqual(five(log_dict), expected_results)
 
     def test_six(self):
         expected_results = {1: 2, 2: 3, 3: 2}
@@ -53,6 +59,14 @@ class TestCountLogsFromFile(unittest.TestCase):
                                             'ERROR': {'count': 1, 'hour': 3},
                                             'INFO': {'count': 2, 'hour': 17}}}
         self.assertEqual(eight("logTest"), expected_results)
+
+    def test_nine(self):
+        expected_results = {'API': 25.343283582089555,
+                            'BackendApp': 24.868957483983692,
+                            'FrontendApp': 23.810984964713104,
+                            'SYSTEM': 25.262211567275994}
+
+        self.assertEqual(run(), expected_results)
 
 
 if __name__ == '__main__':
