@@ -30,13 +30,10 @@ def main():
     '''
     run()
     one()
-log_dict = read_logs('input.txt')
-#main()
-#five(log_dict=read_logs())
-maxr, minr = seven('input.txt')
-
+sdict = seven('logTest')
+print(sdict)
 #print(run())
-for app_name in maxr:
-        print(f"Max run time for{app_name}: {maxr[app_name]['run_time']}, occurring at {maxr[app_name]['timestamp']} \n")
-for app_name in minr:
-        print(f"Min run time for{app_name}: {minr[app_name]['run_time']}, occurring at {minr[app_name]['timestamp']} \n")
+'''
+for app_name in sdict:
+        print(f"Max / min time for {app_name}: {sdict[app_name]['max_run_time']} and {sdict[app_name]['min_run_time']} occurring at {sdict[app_name]['max_timestamp']} and {sdict[app_name]['min_timestamp']}.")
+'''

@@ -2,11 +2,13 @@ import unittest
 from collections import defaultdict
 from task1 import one
 from task2 import two
+from service import three, four, six
 from task5 import five
+from task7 import seven
 from task8 import eight
 from task9 import run
-from service import three, four, six
 from main import read_logs
+
 
 
 class TestCountLogsFromFile(unittest.TestCase):
@@ -47,7 +49,13 @@ class TestCountLogsFromFile(unittest.TestCase):
         expected_results = {1: 2, 2: 3, 3: 2}
         log_dict = read_logs("logTest")
         self.assertEqual(six(log_dict), expected_results)
-
+        
+    def test_seven(self):
+        expected_results = {'BackendApp': {'max_run_time': 17, 'min_run_time': 17, 'max_timestamp': '22:51:03', 'min_timestamp': '22:51:03'},
+                            'FrontendApp': {'max_run_time': 24, 'min_run_time': 24, 'max_timestamp': '17:42:37', 'min_timestamp': '21:01:46'},
+                            'API': {'max_run_time': 20, 'min_run_time': 14, 'max_timestamp': '05:11:14', 'min_timestamp': '04:57:20'}}
+        self.assertEqual(seven('logTest'), expected_results)
+        
     def test_eight(self):
         expected_results = {'API': {'DEBUG': {'count': 0, 'hour': None},
                                     'ERROR': {'count': 2, 'hour': 9},
@@ -65,7 +73,6 @@ class TestCountLogsFromFile(unittest.TestCase):
                             'BackendApp': 24.868957483983692,
                             'FrontendApp': 23.810984964713104,
                             'SYSTEM': 25.262211567275994}
-
         self.assertEqual(run(), expected_results)
 
 
