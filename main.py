@@ -4,7 +4,7 @@ from collections import defaultdict
 from task9 import failureRatePercentage, run
 from task1 import one
 from task5 import five
-#from task7 import seven
+from task7 import seven
 
 def read_logs(file_name):
     with open(file_name) as f:
@@ -28,11 +28,15 @@ def main():
     print(six(log_dict))
     print(failureRatePercentage(log_dict))
     '''
-    #run()
-    #one()
-
+    run()
+    one()
+log_dict = read_logs('input.txt')
 #main()
 #five(log_dict=read_logs())
-#seven(log_dict=read_logs())
+maxr, minr = seven('input.txt')
+
 #print(run())
-#print(five(log_dict=read_logs('input.txt')))
+for app_name in maxr:
+        print(f"Max run time for{app_name}: {maxr[app_name]['run_time']}, occurring at {maxr[app_name]['timestamp']} \n")
+for app_name in minr:
+        print(f"Min run time for{app_name}: {minr[app_name]['run_time']}, occurring at {minr[app_name]['timestamp']} \n")
