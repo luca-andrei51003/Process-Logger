@@ -3,6 +3,7 @@ from service import three, four, six
 from collections import defaultdict
 from task9 import failureRatePercentage, run
 from task1 import one
+from task2 import two
 from task5 import five
 from task7 import seven
 
@@ -18,21 +19,15 @@ def read_logs(file_name):
         log_dict[log.app].append(log)
     return log_dict
 
+log_dict = read_logs('input.txt')
+#Run task 1:
+#one('input.txt')
+#Run task 2:
+#print(two('input.txt'))
+#Run task 3:
+#print(three(log_dict))
 
-def main():
-    '''
-    log_dict = read_logs()
-    #print(failure_rate.items())
-    print(three(log_dict))
-    print(four(log_dict))
-    print(six(log_dict))
-    print(failureRatePercentage(log_dict))
-    '''
-    run()
-    one()
-sdict = seven('logTest')
-print(sdict)
-#print(run())
+#To run task 7, run following loop:
 '''
 for app_name in sdict:
         print(f"Max / min time for {app_name}: {sdict[app_name]['max_run_time']} and {sdict[app_name]['min_run_time']} occurring at {sdict[app_name]['max_timestamp']} and {sdict[app_name]['min_timestamp']}.")
