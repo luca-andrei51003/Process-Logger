@@ -1,0 +1,10 @@
+LICENCE
+README.md
+pyproject.toml
+src/taskuri_pentru_log/__init__.py
+src/taskuri_pentru_log/log.py
+src/taskuri_pentru_log/tasks.py
+src/taskuri_pentru_log.egg-info/PKG-INFO
+src/taskuri_pentru_log.egg-info/SOURCES.txt
+src/taskuri_pentru_log.egg-info/dependency_links.txt
+src/taskuri_pentru_log.egg-info/top_level.txt

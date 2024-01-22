@@ -29,7 +29,7 @@ def main():
     print(failureRatePercentage(log_dict))
     '''
     run()
-    one()
+    one("output.txt")
 sdict = seven('logTest')
 print(sdict)
 #print(run())
