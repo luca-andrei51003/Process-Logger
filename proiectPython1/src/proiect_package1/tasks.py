@@ -213,3 +213,4 @@ def nine():
         fail_percentage = (err_log_count[app] / total_count) * 100 if total_count > 0 else 0
         result_dict[app] = fail_percentage
     return result_dict
+

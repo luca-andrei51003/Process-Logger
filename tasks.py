@@ -3,6 +3,7 @@ import re
 from datetime import time
 from enum import Enum
 from itertools import chain
+from datetime import datetime
 
 class LogStatus(Enum):
     INFO = "INFO"
